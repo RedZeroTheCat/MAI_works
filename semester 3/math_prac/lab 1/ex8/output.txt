@@ -1,0 +1,10 @@
+min base = 7 dec = -22875 no zeros = -123456 
+min base = 10 dec = 98 no zeros = 98 
+min base = 17 dec = 4620 no zeros = FGD 
+min base = 9 dec = 17 no zeros = 18 
+min base = 36 dec = 1261 no zeros = Z1 
+min base = 9 dec = 1316288536 no zeros = 3351741367 
+min base = 16 dec = 268435455 no zeros = FFFFFFF 
+min base = 36 dec = 60466175 no zeros = ZZZZZ 
+min base = 2 dec = 0 no zeros = 0 
+min base = 2 dec = 8388607 no zeros = 11111111111111111111111 

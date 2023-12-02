@@ -2,20 +2,51 @@
 
 #include "functions.c"
 
-int main()
-{
+int main()  {
     // ex2.1 - среднее геометрическое введённых чисел (переменное число аргументов)
     long double result = average_geometric(6, 1.0, 3.0, 6.0, 7.0, 9.0, 2.0);
-    printf("%Lf \n", result);
+    if (result == -2) {
+        printf("Something incorrect with input, possibly - negative num\n");
+    }
+    else if (result == -1) {
+        printf("Negative count of numbers\n");
+    }
+    else {
+        printf("%Lf \n", result);
+    }
 
-    result = average_geometric(0, 1.0, 3.0, 6.0, 7.0, 9.0, 2.0);
-    printf("%Lf \n", result);
+    result = average_geometric(5, 1.0, 3.0, -6.0, -7.0, 9.0, 2.0);
+    if (result == -2) {
+        printf("Something incorrect with input, possibly - negative num\n");
+    }
+    else if (result == -1) {
+        printf("Negative count of numbers\n");
+    }
+    else {
+        printf("%Lf \n", result);
+    }
 
-    result = average_geometric(1, 1.0, 3.0, 6.0, 7.0, 9.0, 2.0);
-    printf("%Lf \n", result);
+    result = average_geometric(6, 2.0, 3.0, 6.0, -7.0, 9.0, 2.0);
+    if (result == -2) {
+        printf("Something incorrect with input, possibly - negative num\n");
+    }
+    else if (result == -1) {
+        printf("Negative count of numbers\n");
+    }
+    else {
+        printf("%Lf \n", result);
+    }
 
-    result = average_geometric(4, 1.0, 3.0, 6.0, 7.0, 9.0, 2.0);
-    printf("%Lf \n", result);
+    result = average_geometric(-6, 1.0, 3.0, 6.0, 7.0, 9.0, 2.0);
+    if (result == -2) {
+        printf("Something incorrect with input, possibly - negative num\n");
+    }
+    else if (result == -1) {
+        printf("Negative count of numbers\n");
+    }
+    else {
+        printf("%Lf \n", result);
+    }
 
     printf("\n=====================\n\n");
 

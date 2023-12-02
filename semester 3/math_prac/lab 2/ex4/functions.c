@@ -2,6 +2,7 @@
 #include <math.h>
 #include <stdarg.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 enum input_status_code {
     isc_invalid,
@@ -98,7 +99,11 @@ enum input_status_code is_convex(int count, ...) {
     return isc_convex;
 }
 
-double polynom_value(double x, int n, ...) {
+double polynom_value(double x, bool* pos_grade, int n, ...) {
+    if (n < 0) {
+        *pos_grade = false;
+        return NAN;
+    }
     va_list coef;
     va_start(coef, n);
     double result = 0;

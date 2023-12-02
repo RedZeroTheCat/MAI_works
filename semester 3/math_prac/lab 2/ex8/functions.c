@@ -3,11 +3,15 @@
 #include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 const char values[36] = "0123456789abcdefghijklmnopqrstuvwxyz";
 
 enum input_status_code {
+    isc_wrong_base,
     isc_memory_error,
+    isc_negative_num,
+    isc_diff_with_base,
     isc_valid
 };
 
@@ -47,6 +51,13 @@ long long max(long long num1, long long num2) {
     return num2;
 }
 
+bool diff_with_base(char symbol, int base) {
+    if (char_to_num(symbol) >= base) {
+        return true;
+    }
+    return false;
+}
+
 void move_char_right(char* string, int length) {
     for (int i = length - 1; i >= 1; i--) {
         string[i] = string[i - 1];
@@ -69,6 +80,11 @@ char* sum_two_num(enum input_status_code **state, int base, char* num1, char* nu
         int first = 0;
         int second = 0;
         int local_result;
+        if (diff_with_base(num1[len1 - i], base) || diff_with_base(num2[len2 - i], base)) {
+            **state = isc_diff_with_base;
+            free(result);
+            return NULL;
+        }
         if (len1 - i >= 0) {
             first = char_to_num(num1[len1 - i]);
         }
@@ -100,6 +116,10 @@ char* sum_two_num(enum input_status_code **state, int base, char* num1, char* nu
 }
 
 char* sum_nums(enum input_status_code *state, int base, int count, ...) {
+    if (base < 2 || 36 < base) {
+        *state = isc_wrong_base;
+        return NULL;
+    }
     char* result = (char*)malloc(sizeof(char) * 2);
     if (result == NULL) {
         *state = isc_memory_error;
@@ -113,7 +133,11 @@ char* sum_nums(enum input_status_code *state, int base, int count, ...) {
     va_start(ptr, count);
     for (int i = 0; i < count; ++i) {
         char* number = va_arg(ptr, char*);
-
+        if (number[0] == '-') {
+            *state = isc_negative_num;
+            free(result);
+            return NULL;
+        }
         result = sum_two_num(&state, base, result, number);
         if (*state != isc_valid) {
             free(result);

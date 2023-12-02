@@ -1,3 +1,5 @@
+#include <asm-generic/errno.h>
+#include <stdbool.h>
 #include <stdio.h>
 
 #include "functions.c"
@@ -35,7 +37,21 @@ int main() {
     analyzer(is_convex(6, v31, v32, v33, v34, v35, v36));
     printf("\n");
 
-    printf("Polynom 2*x^2 + 3 with x = 2: %lf\n", polynom_value(2.0, 2, 2.0, 0.0, 3.0));
+    bool pos_grade = true;          // 2*x^2 + x + 3 with x = 2
+    double result = polynom_value(2.0, &pos_grade, 2, 2.0, 1.0, 3.0);
+    if (pos_grade) {
+        printf("Polynom equals: %lf\n", result);
+    }
+    else {
+        printf("Negative grade of polynom entered\n");
+    }
 
-    printf("Polynom x^3 + 2x^2 + x - 1 with x = 3: %lf\n", polynom_value(3.0, 3, 1.0, 2.0, 1.0, -1.0));
+    pos_grade = true;               // x^3 + 2x^2 + x - 1 with x = 3
+    result = polynom_value(3.0, &pos_grade, 3, 0.0, 2.0, 1.0, -1.0);
+    if (pos_grade) {
+        printf("Polynom equals: %lf\n", result);
+    }
+    else {
+        printf("Negative grade of polynom entered\n");
+    }
 }

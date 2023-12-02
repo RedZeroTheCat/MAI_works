@@ -3,6 +3,9 @@
 #include <math.h>
 
 long double average_geometric(int count, ...) {
+    if (count < 0) {
+        return -1;
+    }
     if (count == 0) {
         return 0;
     }
@@ -10,11 +13,14 @@ long double average_geometric(int count, ...) {
     va_start(argv, count);
     long double result = 1.0L;
 
-    for (int i = 0; i < count - 1; i++) {
+    for (int i = 0; i < count; i++) {
         double arg = va_arg(argv, double);
         result *= arg;
     }
     result = powl(result, (1.0 / count));
+    if (isnan(result)) {
+        return -2;
+    }
     va_end(argv);
     return result;
 }

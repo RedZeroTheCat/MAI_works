@@ -1,0 +1,10 @@
+
+Earnings: 100000, Surname: Spencer, Name: Phil, ID: 8
+Earnings: 45000, Surname: Ignatov, Name: Yuriy, ID: 2
+Earnings: 45000, Surname: Ignatov, Name: Roman, ID: 5
+Earnings: 45000, Surname: Ignatov, Name: Roman, ID: 4
+Earnings: 35000, Surname: Filatov, Name: Denis, ID: 3
+Earnings: 35000, Surname: Dmitrov, Name: Ivan, ID: 1
+Earnings: 23450, Surname: Piratov, Name: Mikhail, ID: 6
+Earnings: 12000, Surname: Regatov, Name: Philip, ID: 7
+

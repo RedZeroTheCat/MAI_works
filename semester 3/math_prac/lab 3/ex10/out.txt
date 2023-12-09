@@ -1,0 +1,37 @@
+Expression 1 tree:
+\ A
+	\ b
+		\ e
+			\ g
+			\ t
+			\ r
+				\ w
+				\ z
+		\ f
+			\ l
+			\ m
+	\ c
+
+
+Expression 2 tree:
+\ B
+\ C
+	\ b
+	\ c
+\ z
+	\ X
+	\ y
+
+
+Expression 3 tree:
+\ b
+	\ e
+	\ c
+	\ d
+	\ l
+
+
+Expression 4 tree:
+\ g
+
+

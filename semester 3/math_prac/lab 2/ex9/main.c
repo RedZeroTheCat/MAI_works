@@ -5,7 +5,7 @@
 int main() {
     representation_check(16, 6, 0.5, 0.25, 0.125, 0.1, 0.2, 0.3);
     printf("\n");
-    representation_check(10, 6, 0.5, 0.25, 0.125, 0.1, 0.2, 0.3);
+    representation_check(10, 6, 0.5, 0.00225, 0.125, 0.1, 0.2, 0.3);
     printf("\n");
     representation_check(8, 6, 0.5, 0.25, 0.125, 0.1, 0.2, 0.3);
     printf("\n");

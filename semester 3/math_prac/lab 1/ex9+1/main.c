@@ -7,7 +7,7 @@
 
 int main(int argc, char* argv[]) {
     if (argc != 2) {
-        printf("Your request mus include: %s <base>\n", argv[0]);
+        printf("Your request must include: %s <base>\n", argv[0]);
         return 1;
     }
     char* terminator;

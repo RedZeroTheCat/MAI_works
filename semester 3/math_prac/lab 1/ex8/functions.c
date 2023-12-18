@@ -125,6 +125,9 @@ status_code convert_from_decimal(int decimal_number, int base,  char** result) {
         size++;
         if (size > sizeof(*result) - 1) {
             (*result) = realloc(*result, size * 2 * sizeof(char));
+            if (result == NULL) {
+                return sc_memory_error;
+            }
         }
         decimal_number /= base;
     }

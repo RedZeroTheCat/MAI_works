@@ -8,3 +8,5 @@ min base = 16 dec = 268435455 no zeros = FFFFFFF
 min base = 36 dec = 60466175 no zeros = ZZZZZ 
 min base = 2 dec = 0 no zeros = 0 
 min base = 2 dec = 8388607 no zeros = 11111111111111111111111 
+min base = 2 dec = 0 no zeros = 0 
+min base = 2 dec = 0 no zeros = 0 

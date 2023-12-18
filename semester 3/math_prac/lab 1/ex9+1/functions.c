@@ -141,7 +141,11 @@ status_code convert_from_decimal(int decimal_number, int base,  char** result) {
         }
         size++;
         if (size > sizeof(*result) - 1) {
-            (*result) = realloc(*result, size * 2 * sizeof(char));
+            char* tmp = realloc(*result, size * 2 * sizeof(char));
+            if (tmp == NULL) {
+                return sc_memory_error;
+            }
+            *result = tmp;
         }
         decimal_number /= base;
     }

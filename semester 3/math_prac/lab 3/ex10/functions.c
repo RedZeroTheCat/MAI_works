@@ -28,6 +28,24 @@ void print_error(status_code state) {
     }
 }
 
+int are_same(char* str1, char* str2) {
+    int l1 = strlen(str1);
+    int l2 = strlen(str2);
+    int min_len = 0;
+    if (l1 > l2) {
+        min_len = l2;
+    }
+    else {
+        min_len = l1;
+    }
+    for (int i = 0; i < min_len; i++) {
+        if (str1[l1 - i] != str2[l2 - i]) {
+            return 0;
+        }
+    }
+    return 1;
+}
+
 char* get_expression(char buffer[BUFF_SIZE], FILE* input) {
     memset(buffer, '\0', BUFF_SIZE);
     return fgets(buffer, BUFF_SIZE + 1, input);

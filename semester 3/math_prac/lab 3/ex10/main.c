@@ -1,10 +1,15 @@
 #include <stdio.h>
+#include <string.h>
 
 #include "functions.c"
 
 int main(int argc, char* argv[]) {
     if (argc != 3) {
         printf("Your request must include: %s <input.file> <output.file>\n", argv[0]);
+        return 1;
+    }
+    if (are_same(argv[1], argv[2])) {
+        printf("You are trying to open for read and write same file\n");
         return 1;
     }
     FILE* input = fopen(argv[1], "r");
@@ -44,5 +49,6 @@ int main(int argc, char* argv[]) {
     }
     fclose(input);
     fclose(output);
+    fflush(stdout);
     return 0;
 }

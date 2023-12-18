@@ -1,4 +1,1 @@
-A (b (e (g, t, r (w, z)), f (l, m)), c)
-B, C (b, c), z(X, y)
-b (e, c, d, l)
-g
+A (b (c, d, f), e (g, h)), z

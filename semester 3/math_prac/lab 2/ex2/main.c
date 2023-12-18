@@ -53,7 +53,7 @@ int main()  {
     // ex2.2 - рекурсивная функция возведения вещественного числа в целую степень
     printf("%Lf \n", bin_pow(6.9, 2));
 
-    printf("%Lf \n", bin_pow(0, 6));
+    printf("%Lf \n", bin_pow(0, 0));
 
     printf("%Lf \n", bin_pow(-1, 6));
     printf("%Lf \n", bin_pow(-1, 5));

@@ -6,7 +6,7 @@
 int main() {
     CELL** cells;
     int count = 2;
-    char* pattern = "gh";
+    char* pattern = "hello";
     status_code state = find_all_patterns(&cells, pattern, count, "in1.txt", "in2.txt");
     switch (state) {
         case sc_correct:

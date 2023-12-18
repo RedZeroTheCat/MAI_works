@@ -14,10 +14,10 @@ int main() {
     struct cord v12 = {1, 0};
     struct cord v13 = {0, 2};
 
-    struct cord v21 = {-2, 0};
-    struct cord v22 = {0, 2};
-    struct cord v23 = {2, 0};
-    struct cord v24 = {0, -2};
+    struct cord v21 = {-2, 1};
+    struct cord v22 = {0, 1};
+    struct cord v23 = {1, 1};
+    struct cord v24 = {2, 1};
 
     struct cord v31 = {-1, 1};
     struct cord v32 = {2, 4};

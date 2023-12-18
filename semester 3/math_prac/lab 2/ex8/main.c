@@ -5,12 +5,12 @@
 
 int main() {
     enum input_status_code state;
-    char* a = "10";
-    char* b = "0012";
-    char* c = "0000C";
+    char* a = "0000";
+    char* b = "000";
+    char* c = "000000";
     int base = 10;
-    int count = 2;
-    char* result = sum_nums(&state, base, count, a, b);
+    int count = 3;
+    char* result = sum_nums(&state, base, count, a, b, c);
     if (state == isc_memory_error) {
         printf("Memory error\n");
     }

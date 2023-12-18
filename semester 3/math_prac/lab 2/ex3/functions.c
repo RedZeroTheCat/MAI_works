@@ -102,6 +102,9 @@ void move_int_left(int* string, int length) {
 status_code find_pattern(char* pattern, char* buffer, int patt_len, FILE* input, CELL** result) {
     if (patt_len == 0) {
         CELL* cell = (CELL*)malloc(sizeof(CELL));
+        if (cell == NULL) {
+            return sc_memory_error;
+        }
         cell -> state = sc_everything;
         *result = cell;
         return sc_correct;
@@ -228,6 +231,9 @@ status_code find_all_patterns(CELL*** result, char* pattern, int count, ...) {
     va_list args;
     va_start(args, count);
     CELL** cells = (CELL**)malloc(sizeof(CELL*) * count);
+    if (cells == NULL) {
+        return sc_memory_error;
+    }
     for (int i = 0; i < count; i++) {
         cells[i] = NULL;
     }

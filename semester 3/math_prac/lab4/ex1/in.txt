@@ -1,0 +1,21 @@
+#define A 12
+#define G x
+#define M 1024
+#define i 9876543210123456789
+#define x 1234
+#define l long
+#define f ||||
+#define b 102
+#define B 201
+#define 9 90
+
+int main() {
+    int a = G;
+    int b = A + A + i + G;
+    double in = G * 2;
+    x;
+    int a[M];
+    l val = 9*3;
+    there is f:
+    b and B;
+}

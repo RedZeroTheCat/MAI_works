@@ -1,0 +1,21 @@
+#define A 12
+#define G x
+#define M 1024
+#define i 9876543210123456789
+#define x 1234
+#define l long
+#define f ||||
+#define b 102
+#define B 201
+#define 9 90
+
+int main() {
+    int a = 1234;
+    int 102 = 12 + 12 + 9876543210123456789 + 1234;
+    double in = 1234 * 2;
+    1234;
+    int a[1024];
+    long val = 90*3;
+    there is ||||:
+    102 and 201;
+}

@@ -1,0 +1,25 @@
+Error detected in file: in2.txt
+Type: Invalid symbol
+Number of expression: 0
+Expression: ) 4 * 8 (
+
+Error detected in file: in2.txt
+Type: Wrong brackets
+Number of expression: 1
+Expression: 4 + (56 / 7
+
+Error detected in file: in2.txt
+Type: Overflow
+Number of expression: 4
+Expression: 2^687686867867
+
+Error detected in file: in2.txt
+Type: Invalid symbol
+Number of expression: 5
+Expression: 72346123124321134323647856237 + 873167634524524298787997758263785
+
+Error detected in file: in2.txt
+Type: Invalid symbol
+Number of expression: 6
+Expression: a
+
